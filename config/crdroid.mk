@@ -40,9 +40,13 @@ PRODUCT_PACKAGES += \
     ThemePicker \
     OmniJaws \
     OmniStyle \
-    MatLog \
     QuickAccessWallet \
     StitchImage
+
+ifneq ($(TARGET_EXCLUDES_MATLOG),true)
+PRODUCT_PACKAGES += \
+    MatLog
+endif
 
 # Fonts
 PRODUCT_PACKAGES += \
